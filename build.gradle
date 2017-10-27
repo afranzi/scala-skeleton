@@ -1,0 +1,54 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+
+    dependencies {
+        classpath 'com.adarshr:gradle-test-logger-plugin:1.0.1',    // https://github.com/radarsh/gradle-test-logger-plugin
+                "com.github.jengelman.gradle.plugins:shadow:2.0.0"  // https://github.com/johnrengelman/shadow
+    }
+}
+
+apply plugin: 'scala'
+apply plugin: 'application'
+apply plugin: 'com.adarshr.test-logger'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+group 'com.afranzi.socialpoint'
+version '1.0.0'
+mainClassName = "com.afranzi.socialpoint.Main"
+
+ext {
+    scalaMainVersion = '2.12'
+    scalaMinVersion = '3'
+    scalaVersion = "$scalaMainVersion.$scalaMinVersion"
+
+    scallopVersion = "3.1.1"
+
+    junitVersion = "4.12"
+    scalatestVersion = "3.0.1"
+}
+
+dependencies {
+
+    compile "org.scala-lang:scala-library:$scalaVersion",
+            "org.scala-lang:scala-compiler:$scalaVersion",
+            "org.rogach:scallop_$scalaMainVersion:$scallopVersion"        // https://github.com/scallop/scallop
+
+    testCompile "junit:junit:$junitVersion",
+            "org.scalatest:scalatest_$scalaMainVersion:$scalatestVersion", // http://www.scalatest.org/
+            "org.scalactic:scalactic_$scalaMainVersion:$scalatestVersion"  // http://www.scalactic.org/
+}
+
+shadowJar.dependsOn test

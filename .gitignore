@@ -1,0 +1,22 @@
+# Common
+.DS_Store
+*.iml
+*.class
+*.log
+.idea
+.iml
+og-classpath
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+
+# gradle specific
+gradlew.bat
+build-config
+build
+.gradle
+out/
+
+
+
