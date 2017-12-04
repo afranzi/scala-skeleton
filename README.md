@@ -1,5 +1,4 @@
-# DataLab Big Data Engineer
-Social Point
+# Scala Skeleton
 
 ## Execution
 Build
@@ -20,7 +19,7 @@ ShadowJar
 
 Execute
 ```
-java -jar build/libs/afranzi-socialpoint-1.0.0-all.jar --dummies 2
+java -jar build/libs/scala-skeleton-1.0.0-all.jar --dummies 2
 ```
 
 
