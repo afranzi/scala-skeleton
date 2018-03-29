@@ -25,9 +25,9 @@ apply plugin: 'application'
 apply plugin: 'com.adarshr.test-logger'
 apply plugin: 'com.github.johnrengelman.shadow'
 
-group 'com.afranzi.socialpoint'
+group 'com.afranzi.skeleton'
 version '1.0.0'
-mainClassName = "com.afranzi.socialpoint.Main"
+mainClassName = "com.afranzi.skeleton.Main"
 
 ext {
     scalaMainVersion = '2.12'

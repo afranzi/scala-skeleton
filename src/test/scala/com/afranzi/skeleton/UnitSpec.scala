@@ -1,4 +1,4 @@
-package com.afranzi.socialpoint
+package com.afranzi.skeleton
 
 import org.junit.runner.RunWith
 import org.scalatest._

@@ -1,7 +1,6 @@
-package com.afranzi.socialpoint
+package com.afranzi.skeleton
 
 object Main extends App {
-  println("DataLab - Big Data Engineer")
 
   val argsParser = new ArgsParser(args)
   val dummies = argsParser.dummies

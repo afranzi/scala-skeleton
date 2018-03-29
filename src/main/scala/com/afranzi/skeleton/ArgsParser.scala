@@ -1,4 +1,4 @@
-package com.afranzi.socialpoint
+package com.afranzi.skeleton
 
 import org.rogach.scallop.{ScallopConf, ScallopOption}
 

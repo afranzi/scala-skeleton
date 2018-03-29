@@ -22,7 +22,6 @@ Execute
 java -jar build/libs/scala-skeleton-1.0.0-all.jar --dummies 2
 ```
 
-
 ## Libraries
 ### Gradle
 - [Gradle Test Logger Plugin](https://github.com/radarsh/gradle-test-logger-plugin): A Gradle plugin for printing beautiful logs on the console while running tests.
